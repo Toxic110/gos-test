@@ -1,0 +1,22 @@
+/*
+   Import partials below
+*/
+
+@import './utilites/variables';
+@import "./base/reset";
+@import "./base/color";
+@import "./base/fonts";
+@import "./base/global";
+@import "./base/document";
+@import "./base/grid";
+@import "./base/buttons";
+@import "./base/form";
+@import "~selectize/dist/css/selectize.css";
+
+//blocks
+@import './blocks/header';
+@import './blocks/head-info';
+@import './blocks/steps-form';
+@import './blocks/pact-list';
+@import './blocks/notification';
+@import './blocks/success-info';

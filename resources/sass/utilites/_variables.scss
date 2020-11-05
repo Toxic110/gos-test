@@ -1,0 +1,21 @@
+// styles
+$font-size-default: 16px !default;
+$radius: 4px !default;
+// grid
+$container-tablet: 1120px !default;
+$container-mob-tablet: 992px !default;
+$container-mob-tablet-xs: 850px !default;
+$container-mobile: 768px !default;
+$container-mobile-xs: 480px !default;
+
+@import './mixins';
+
+$font-family-secondary: 'SF Pro Display', serif !default;
+$font-family-text: 'UI 2 Regular', sans-serif !default;
+$font-family-text-medium: 'UI 2 Medium', sans-serif !default;
+$font-family-text-bold: 'UI 2 Bold', sans-serif !default;
+$font-weight-light: 300 !default;
+$font-weight-regular: 400 !default;
+$font-weight-medium: 500 !default;
+$font-weight-semi-bold: 600 !default;
+$font-weight-bold: 700 !default;

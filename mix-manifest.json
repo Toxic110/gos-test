@@ -1,0 +1,19 @@
+{
+    "/public/js/app.js": "/public/js/app.js",
+    "/public/css/app.css": "/public/css/app.css",
+    "/public/images/bell.svg": "/public/images/bell.svg",
+    "/public/images/check-mini.svg": "/public/images/check-mini.svg",
+    "/public/images/check.svg": "/public/images/check.svg",
+    "/public/images/edit.svg": "/public/images/edit.svg",
+    "/public/images/logo-gos.svg": "/public/images/logo-gos.svg",
+    "/public/images/logo.svg": "/public/images/logo.svg",
+    "/public/images/user.svg": "/public/images/user.svg",
+    "/public/fonts/GOST-UI-2-Bold.woff": "/public/fonts/GOST-UI-2-Bold.woff",
+    "/public/fonts/GOST-UI-2-Bold.woff2": "/public/fonts/GOST-UI-2-Bold.woff2",
+    "/public/fonts/GOST-UI-2-Medium.woff": "/public/fonts/GOST-UI-2-Medium.woff",
+    "/public/fonts/GOST-UI-2-Medium.woff2": "/public/fonts/GOST-UI-2-Medium.woff2",
+    "/public/fonts/GOST-UI-2.woff": "/public/fonts/GOST-UI-2.woff",
+    "/public/fonts/GOST-UI-2.woff2": "/public/fonts/GOST-UI-2.woff2",
+    "/public/fonts/SFProDisplay-Bold.woff": "/public/fonts/SFProDisplay-Bold.woff",
+    "/public/fonts/SFProDisplay-Bold.woff2": "/public/fonts/SFProDisplay-Bold.woff2"
+}

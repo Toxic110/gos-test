@@ -1,0 +1,22 @@
+.notification {
+  position: relative;
+  margin: 24px 0 16px;
+  padding: 16px 20px 24px 52px;
+  border-radius: $radius;
+  background: color('yellow');
+
+  &:before {
+    content: '';
+    position: absolute;
+    left: 16px;
+    top: 16px;
+    width: 24px;
+    height: 24px;
+    background: url('../images/bell.svg')no-repeat center center/cover;
+  }
+
+  &__text {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}

@@ -1,0 +1,146 @@
+.section-steps-form {
+  padding-top: 40px;
+  padding-bottom: 290px;
+  @include mediaToDown($container-mobile) {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+
+.steps-form {
+  width: 736px;
+  @include mediaToDown($container-mobile) {
+    width: 100%;
+  }
+
+  &__block {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 16px;
+    border-radius: $radius;
+    background: color('white');
+
+    & + & {
+      margin-top: 24px;
+    }
+
+    &--disabled {
+      .steps-form__content {
+        display: none;
+      }
+
+      .steps-form__number {
+        background: color('grey-hard');
+      }
+
+      .steps-form__title {
+        color: color('grey-hard');
+      }
+    }
+
+    &--success {
+      .steps-form__content {
+        display: none;
+      }
+
+      .steps-form__edit {
+        display: flex;
+      }
+
+      .steps-form__number {
+        font-size: 0;
+        background: color('green') url('../images/check.svg')no-repeat center center/32px;
+      }
+    }
+  }
+
+  &__content {
+    width: 100%;
+    padding: 16px 176px 8px 80px;
+    @include mediaToDown($container-mobile) {
+      padding: 16px 0;
+    }
+
+    &--medium {
+      padding: 8px 80px 24px;
+      @include mediaToDown($container-mobile) {
+        padding: 16px;
+      }
+    }
+  }
+
+  &__number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    font-size: 22px;
+    line-height: 28px;
+    font-family: $font-family-secondary;
+    color: color('white');
+    background: color('blue');
+    @include mediaToDown($container-mobile) {
+      width: 32px;
+      height: 32px;
+      font-size: 20px;
+      line-height: 26px;
+    }
+  }
+
+  &__title {
+    padding-left: 32px;
+    font-size: 21px;
+    line-height: 32px;
+    font-family: $font-family-secondary;
+    @include mediaToDown($container-mobile) {
+      padding-left: 8px;
+      font-size: 18px;
+      line-height: 28px;
+    }
+  }
+
+  &__edit {
+    display: none;
+    align-items: center;
+    margin-left: auto;
+    cursor: pointer;
+
+    &-icon {
+      width: 24px;
+      @include mediaToDown($container-mobile) {
+        width: 20px;
+      }
+
+      img {
+        display: block;
+        width: 100%;
+      }
+    }
+
+    &-text {
+      padding-left: 4px;
+      font-size: 14px;
+      line-height: 20px;
+      font-family: $font-family-text-medium;
+      color: color('blue');
+      @include mediaToDown($container-mobile) {
+        font-size: 12px;
+        line-height: 18px;
+      }
+    }
+  }
+
+  &__success {
+    display: none;
+  }
+}
+
+.document {
+
+  &__drive {
+    display: none;
+  }
+}

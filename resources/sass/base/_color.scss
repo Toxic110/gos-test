@@ -1,0 +1,16 @@
+$colors: (
+  'black': #3B4256,
+  'blue': #0061D9,
+  'blue-light': #3684E2,
+  'grey': #F5F5F7,
+  'grey-hard': #BCC3CA,
+  'white': #ffffff,
+  'green': #1BC400,
+  'bg': #F4F7FB,
+  'yellow': #FFF5E6,
+  'border': rgba(59, 66, 86, 0.5),
+) !default;
+
+@function color($key: 'white', $alt: 'black') {
+  @return if(map-has-key($colors, $key), map-get($colors, $key), $alt);
+}

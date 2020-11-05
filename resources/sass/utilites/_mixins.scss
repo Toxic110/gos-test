@@ -1,0 +1,169 @@
+@mixin hover-focus() {
+  &:focus,
+  &:hover {
+    @content;
+  }
+}
+
+@function pxToVwMobile($num) {
+  @return $num / 1px / 320 * 100vw;
+}
+
+@function pxToVwHD($num) {
+  @return $num / 1px / 1920 * 100vw;
+}
+
+@function pxToVwLayoutSize($num) {
+  @return $num / 1px / 1170 * 100vw;
+}
+
+@function pxToEm($num, $default-font-size: $font-size-default) {
+  @return #{$num / $default-font-size}em;
+}
+
+@function pxToRem($font-size, $base-font-size: 16px) {
+  @return #{$font-size / $base-font-size}rem;
+}
+
+
+@mixin clearfix() {
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+@mixin container-fixed($gutter) {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left:  floor(($gutter / 2));
+  padding-right: ceil(($gutter / 2));
+  @include clearfix;
+}
+
+@mixin absolute-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin print-skip-false($list) {
+  @each $index, $value in $list {
+    @if $value != false {
+      #{$index}: #{$value};
+    }
+  }
+}
+
+@mixin mediaOnly($widthFrom, $widthTo, $device: 'all') {
+  @media #{$device} and (min-width: #{$widthFrom}) and (max-width: #{$widthTo - 1px}) {
+    @content;
+  }
+}
+
+@mixin mediaToUp($width, $device: 'all') {
+  @media #{$device} and (min-width: #{$width}) {
+    @content;
+  }
+}
+
+@mixin mediaToDown($width, $device: 'all') {
+  @media #{$device} and (max-width: #{$width - 1px}) {
+    @content;
+  }
+}
+
+@mixin retina {
+  @media
+  only screen and (-webkit-min-device-pixel-ratio: 2),
+  only screen and (min--moz-device-pixel-ratio: 2),
+  only screen and (-o-min-device-pixel-ratio: 2/1),
+  only screen and (min-device-pixel-ratio: 2),
+  only screen and (min-resolution: 192dpi),
+  only screen and (min-resolution: 2dppx) {
+    @content;
+  }
+}
+
+@mixin print {
+  @media print {
+    @content;
+  }
+}
+
+@mixin word-wrap() {
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+@mixin dropdown() {
+  position: absolute;
+  z-index: 15;
+  top: 100%;
+  left: 0;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.3s ease-in-out, opacity 0.3s ease-in-out;
+
+  @content
+}
+
+@mixin dropdown-show() {
+  visibility: visible;
+  opacity: 1;
+}
+
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} {
+    @content;
+  }
+
+  @-moz-keyframes #{$name} {
+    @content;
+  }
+
+  @keyframes #{$name} {
+    @content;
+  }
+}
+
+@mixin object-fit($fit: fill, $position: null){
+  -o-object-fit: $fit;
+  object-fit: $fit;
+  @if $position {
+    -o-object-position: $position;
+    object-position: $position;
+    font-family: 'object-fit: #{$fit}; object-position: #{$position}';
+  } @else {
+    font-family: 'object-fit: #{$fit}';
+  }
+}
+
+@mixin element($name, $context: &) {
+  @at-root #{$context}#{$separate-element}#{$name} {
+    @content;
+  }
+}
+
+@mixin modifier($name, $context: &) {
+  @at-root #{$context}#{$separate-modifier}#{$name} {
+    @content;
+  }
+}
+
+@mixin dependenceElement($name, $context: &) {
+  #{$context}#{$separate-element}#{$name} {
+    @content;
+  }
+}
+
+@mixin dependenceModifier($name, $context: &) {
+  #{$context}#{$separate-modifier}#{$name} {
+    @content;
+  }
+}

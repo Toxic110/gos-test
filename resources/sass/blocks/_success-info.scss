@@ -1,0 +1,44 @@
+.success-info {
+
+  &__text {
+    font-size: 18px;
+    line-height: 24px;
+
+    & + & {
+      margin-top: 24px;
+    }
+  }
+
+  &__number {
+    font-family: $font-family-text-bold;
+  }
+
+  &__link {
+    width: 256px;
+    @include mediaToDown($container-mobile) {
+      width: 100%;
+
+      & + & {
+        margin-top: 16px;
+      }
+    }
+
+    &--wrap {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 24px;
+      @include mediaToDown($container-mobile) {
+        flex-direction: column;
+      }
+    }
+  }
+
+  &__personal {
+    color: color('blue');
+    text-decoration: none;
+  }
+
+  &__phone {
+    text-decoration: none;
+  }
+}

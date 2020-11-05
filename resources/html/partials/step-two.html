@@ -1,0 +1,119 @@
+<div class="steps-form__block step-form__block--two steps-form__block--disabled">
+  <div class="steps-form__number">2</div>
+  <div class="steps-form__title">Данные заявителя</div>
+  <div class="steps-form__edit js-edit-step-two">
+    <div class="steps-form__edit-icon">
+      <img src="images/edit.svg" alt="icon">
+    </div>
+    <div class="steps-form__edit-text">Изменить</div>
+  </div>
+  <div class="steps-form__content">
+    <div class="form__row">
+      <label>
+        <span class="form__row-label">Фамилия</span>
+        <input class="js-input-fio" type="text" name="surname" placeholder="Ваша фамилия">
+      </label>
+    </div>
+
+    <div class="form__row">
+      <label>
+        <span class="form__row-label">Имя</span>
+        <input class="js-input-fio" type="text" name="youname" placeholder="Ваше имя">
+      </label>
+    </div>
+
+    <div class="form__row">
+      <label>
+        <span class="form__row-label">Отчество</span>
+        <input class="js-input-fio" type="text" name="patronymic" placeholder="Ваше отчество">
+      </label>
+    </div>
+
+    <div class="form__row">
+      <label>
+        <span class="form__row-label">Электронная почта</span>
+        <input type="text" name="email" placeholder="Ваша почта">
+      </label>
+    </div>
+
+    <div class="form__row">
+      <label>
+        <span class="form__row-label">Телефон</span>
+        <input type="text" name="phone" placeholder="Ваш телефон">
+      </label>
+    </div>
+
+    <div class="form__subtitle">
+      Документ, удостоверяющий личность
+    </div>
+
+    <div class="form__row">
+      <label>
+        <span class="form__row-label">Документ</span>
+        <select class="js-document-select">
+          <option value="1">Паспорт</option>
+          <option value="2">Водительское удостовирение</option>
+        </select>
+      </label>
+    </div>
+
+    <div class="form__row form__document document__passport js-document-passport">
+      <div class="form__row">
+        <div class="form__row--medium">
+          <label>
+            <span class="form__row-label">Серия</span>
+            <input class="js-passport-series" type="text" name="passportSeries" placeholder="Серия паспорта">
+          </label>
+        </div>
+        <div class="form__row--long">
+          <label>
+            <span class="form__row-label">Номер</span>
+            <input class="js-passport-number" type="text" name="passportNumber" placeholder="Номер паспорта">
+          </label>
+        </div>
+      </div>
+
+      <div class="form__row">
+        <div class="form__row-label offset-margin">Когда выдан</div>
+        <div class="form__row--short">
+          <label>
+            <span class="form__row-label">День</span>
+            <input class="js-passport-day" type="text" name="passportDay" placeholder="День">
+          </label>
+        </div>
+        <div class="form__row--short">
+          <label>
+            <span class="form__row-label">Месяц</span>
+            <input class="js-passport-month" type="text" name="passportMonth" placeholder="Месяц">
+          </label>
+        </div>
+        <div class="form__row--medium-long">
+          <label>
+            <span class="form__row-label">Год</span>
+            <input class="js-passport-year" type="text" name="passportYear" placeholder="Год">
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <div class="form__row form__document document__drive js-document-drive">
+      <div class="form__row">
+        <label>
+          <span class="form__row-label">Номер</span>
+          <input class="js-drive-number" type="text" name="driveNumber" placeholder="Номер">
+        </label>
+      </div>
+
+      <div class="form__row">
+        <label>
+          <span class="form__row-label">Подразделение</span>
+          <input class="js-drive-chapter" type="text" name="driveChapter" placeholder="Номер подразделения">
+        </label>
+      </div>
+    </div>
+
+    <div class="form__row">
+      <button class="btn-blue js-btn-nex" type="button">Продолжить</button>
+    </div>
+  </div>
+</div>

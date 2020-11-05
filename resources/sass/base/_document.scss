@@ -1,0 +1,36 @@
+* {
+  scroll-behavior: smooth;
+}
+
+*, ::before, ::after {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+  }
+
+  html, body {
+    line-height: 1;
+    color: color('black');
+    background: color('bg');
+    vertical-align: baseline;
+    font-size: $font-size-default;
+    font-family: $font-family-text;
+  }
+
+  html,
+  body,
+  .layout {
+    height: 100%;
+    width: 100%;
+    min-height: 100%;
+  }
+
+  button, a {
+    -webkit-touch-callout: none;
+    &:hover, &:focus, &:active {
+      cursor: pointer;
+    }
+  }
+
+  main {
+    padding-top: 90px;
+  }

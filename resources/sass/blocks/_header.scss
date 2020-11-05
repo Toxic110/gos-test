@@ -1,0 +1,94 @@
+.header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  padding: 16px 0;
+  background: color('blue-light');
+  z-index: 100;
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include mediaToDown($container-mobile) {
+      padding: 0 10px;
+    }
+  }
+
+  &__block {
+    display: flex;
+    align-items: center;
+    color: color('white');
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+  }
+
+  &__logo {
+    width: 31px;
+    @include mediaToDown($container-mobile) {
+      width: 20px;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+    }
+
+    &-text {
+      padding: 6px 0 0 8px;
+      font-size: 18px;
+      line-height: 24px;
+      font-family: $font-family-text-bold;
+      @include mediaToDown($container-mobile) {
+        font-size: 12px;
+        line-height: 19px;
+      }
+    }
+  }
+
+  &__user {
+    position: relative;
+    padding-left: 36px;
+    @include mediaToDown($container-mobile) {
+      padding-left: 16px;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 24px;
+      height: 24px;
+      background: url('../images/user.svg')no-repeat center center/cover;
+    }
+
+    &-name {
+      padding-top: 2px;
+      font-size: 18px;
+      line-height: 24px;
+      @include mediaToDown($container-mobile) {
+        font-size: 0;
+      }
+    }
+  }
+
+  &__logout {
+    padding-left: 28px;
+    font-size: 18px;
+    line-height: 24px;
+    cursor: pointer;
+    @include mediaToDown($container-mobile) {
+      padding-left: 12px;
+      padding-top: 6px;
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+}
