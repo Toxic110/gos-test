@@ -6,6 +6,10 @@
     padding: 20px 10px;
   }
 
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    padding-top: 180px;
+  }
+
   &:before {
     content: '';
     position: absolute;

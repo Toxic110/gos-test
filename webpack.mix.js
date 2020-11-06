@@ -32,7 +32,7 @@ function fileincludeRun() {
 mix.options({
   postCss: [
     require("autoprefixer")({
-      browsers: ["last 1 versions", "ie 11"],
+      browsers: ["last 1 versions", "ie 10"],
       cascade: false
     })
   ]
@@ -43,7 +43,7 @@ mix
   .polyfill({
     enabled: true,
     useBuiltIns: "usage",
-    targets: { ie: 11 }
+    targets: { ie: 10 }
   })
   .then(function() {
     gulp.parallel(fileincludeRun)();
